@@ -1,4 +1,5 @@
 <template>
+    <RouterLink :to="{ name: 'Home' }">Home</RouterLink>
     <div id="myapp">
         <figure>
             <h1>Welcome to Fight Club</h1>
