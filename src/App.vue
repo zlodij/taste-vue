@@ -1,16 +1,10 @@
 <template>
-  <EasterEgg />
+  <router-view />
 </template>
 
 <script>
-import EasterEgg from './components/EasterEgg.vue'
-
-
 export default {
-  name: 'App',
-  components: {
-    EasterEgg
-  }
+  name: 'App'
 }
 </script>
 
