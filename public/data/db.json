@@ -1,0 +1,79 @@
+{
+  "acls": [
+    {
+      "id": "1",
+      "name": "Betsy",
+      "description": "Quia magnam eaque",
+      "objTypes": [],
+      "statuses": [],
+      "accessors": [
+        {
+          "name": "dm_owner",
+          "permit": 7,
+          "alias": true,
+          "svc": false,
+          "xpermits": [],
+          "org-levels": []
+        },
+        {
+          "name": "dm_world",
+          "permit": 3,
+          "alias": true,
+          "svc": false,
+          "xpermits": [],
+          "org-levels": []
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Marguerite",
+      "description": "Ut sed quia voluptatem autem porro atque ullam qui dolorem",
+      "objTypes": [],
+      "statuses": [],
+      "accessors": [
+        {
+          "name": "dm_owner",
+          "permit": 7,
+          "alias": true,
+          "svc": false,
+          "xpermits": [],
+          "org-levels": []
+        },
+        {
+          "name": "dm_world",
+          "permit": 3,
+          "alias": true,
+          "svc": false,
+          "xpermits": [],
+          "org-levels": []
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Betsy",
+      "description": "Ut vel voluptate iure deserunt",
+      "objTypes": [],
+      "statuses": [],
+      "accessors": [
+        {
+          "name": "dm_owner",
+          "permit": 7,
+          "alias": true,
+          "svc": false,
+          "xpermits": [],
+          "org-levels": []
+        },
+        {
+          "name": "dm_world",
+          "permit": 3,
+          "alias": true,
+          "svc": false,
+          "xpermits": [],
+          "org-levels": []
+        }
+      ]
+    }
+  ]
+}
