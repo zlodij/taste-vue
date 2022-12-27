@@ -1,41 +1,51 @@
 <template>
-    <div style="display: inline-block; width: 320px;">
+    <div style="display: inline-block; width: 960px; border: 1px dashed darkgrey;">
         <h3>{{ title }}</h3>
-        <div class="details">
-            <label>Name:</label>
-            <input name="name" type="text" placeholder="Enter name" required v-model="acl.name" />
+        <div style="display: flex; column-gap: 5px;">
+            <div style="display: inline-block; width:240px">
+                <div class="details">
+                    <h4>General info</h4>
 
-            <label>Description:</label>
-            <input name="description" type="text" placeholder="Enter description" v-model="acl.description" />
+                    <label for="name">Name:</label>
+                    <input name="name" type="text" placeholder="Enter name" required v-model="acl.name" />
 
-            <label>Obj.Types:</label>
-            <select multiple v-model="acl.objTypes">
-                <option value="bnk_pledge">Pledge</option>
-                <option value="bnk_limit">Limit</option>
-                <option value="bnk_covenant">Covenant</option>
-            </select>
+                    <label>Description:</label>
+                    <input name="description" type="text" placeholder="Enter description" v-model="acl.description" />
 
-            <label>Statuses:</label>
-            <select multiple v-model="acl.statuses">
-                <!--
-                <option value="PLG_S_ACTIVE">ACTIVE</option>
-                <option value="PLG_S_CLOSED">CLOSED</option>
-                <option value="PLG_S_NEW">NEW</option>
-            -->
-            </select>
+                    <label>Obj.Types:</label>
+                    <select multiple v-model="acl.objTypes">
+                        <option value="bnk_pledge">Pledge</option>
+                        <option value="bnk_limit">Limit</option>
+                        <option value="bnk_covenant">Covenant</option>
+                    </select>
 
-            <div class="buttons">
-                <button @click="onApply">Apply</button>
-                <button @click="onCancel">Cancel</button>
+                    <label>Statuses:</label>
+                    <select multiple v-model="acl.statuses">
+                        <!--
+                        <option value="PLG_S_ACTIVE">ACTIVE</option>
+                        <option value="PLG_S_CLOSED">CLOSED</option>
+                        <option value="PLG_S_NEW">NEW</option>-->
+                    </select>
+                </div>
             </div>
+            <div style="flex-grow: 1;">
+                <Accessors :accessors="acl.accessors" />
+            </div>
+        </div>
+        <div class="buttons">
+            <button @click="onApply">Apply</button>
+            <button @click="onCancel">Cancel</button>
         </div>
     </div>
 </template>
 
 <script>
 
+import Accessors from './Accessors.vue'
+
 export default {
     props: ['id'],
+    components: { Accessors },
     data() {
         return {
             title: '',
@@ -104,7 +114,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .details {
     margin: 10px auto;
     border: 1px solid darkgrey;
@@ -127,8 +137,10 @@ select {
 }
 
 .buttons {
-    padding-top: 5px;
+    padding: 5px;
     display: flex;
     column-gap: 5px;
+    justify-content: center;
+    flex-grow: 1;
 }
 </style>
